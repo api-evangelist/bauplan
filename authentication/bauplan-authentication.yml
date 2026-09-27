@@ -1,0 +1,15 @@
+generated: '2026-09-27'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.bauplanlabs.com/tutorial/installation
+sources:
+- https://docs.bauplanlabs.com/tutorial/installation
+- https://docs.bauplanlabs.com/tutorial/quick-start
+- https://bauplanlabs.com/videos/getting-started-with-bauplan-labs
+description: Authentication methods as documented
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: Obtain your API key Sign in to your Bauplan account ,navigate to your Settings → API Keys , and generate a new API key.
+  how_to_obtain: Sign in to your Bauplan account, navigate to your Settings → API Keys, and generate a new API key.
+docs: https://docs.bauplanlabs.com/tutorial/installation

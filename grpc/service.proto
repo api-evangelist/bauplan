@@ -1,0 +1,44 @@
+syntax = "proto3";
+package bpln_proto.commander.service.v2;
+
+import "bpln_proto/commander/service/v2/bauplan_info.proto";
+import "bpln_proto/commander/service/v2/cancel_job.proto";
+import "bpln_proto/commander/service/v2/code_snapshot_re_run.proto";
+import "bpln_proto/commander/service/v2/code_snapshot_run.proto";
+import "bpln_proto/commander/service/v2/external_table_create.proto";
+import "bpln_proto/commander/service/v2/get_jobs.proto";
+import "bpln_proto/commander/service/v2/get_logs.proto";
+import "bpln_proto/commander/service/v2/job_context.proto";
+import "bpln_proto/commander/service/v2/push_runner_status.proto";
+import "bpln_proto/commander/service/v2/query_run.proto";
+import "bpln_proto/commander/service/v2/snapshot_info.proto";
+import "bpln_proto/commander/service/v2/subscribe_logs.proto";
+import "bpln_proto/commander/service/v2/subscribe_runner.proto";
+import "bpln_proto/commander/service/v2/table_create_plan.proto";
+import "bpln_proto/commander/service/v2/table_create_plan_apply.proto";
+import "bpln_proto/commander/service/v2/table_data_import.proto";
+
+service V2CommanderService {
+  rpc GetJobs(GetJobsRequest) returns (GetJobsResponse) {}
+  rpc GetLogs(GetLogsRequest) returns (GetLogsResponse) {}
+  rpc GetJobContext(GetJobContextRequest) returns (GetJobContextResponse) {}
+
+  rpc TableCreatePlan(TableCreatePlanRequest) returns (TableCreatePlanResponse) {}
+  rpc TableCreatePlanApply(TableCreatePlanApplyRequest) returns (TableCreatePlanApplyResponse) {}
+  rpc TableDataImport(TableDataImportRequest) returns (TableDataImportResponse) {}
+  rpc ExternalTableCreate(ExternalTableCreateRequest) returns (ExternalTableCreateResponse) {}
+
+  rpc CodeSnapshotRun(CodeSnapshotRunRequest) returns (CodeSnapshotRunResponse) {}
+  rpc CodeSnapshotReRun(CodeSnapshotReRunRequest) returns (CodeSnapshotReRunResponse) {}
+
+  rpc QueryRun(QueryRunRequest) returns (QueryRunResponse) {}
+
+  rpc PushRunnerStatus(PushRunnerStatusRequest) returns (PushRunnerStatusResponse) {}
+
+  // FROM V1
+  rpc CancelJob(CancelJobRequest) returns (CancelJobResponse) {}
+  rpc SubscribeLogs(SubscribeLogsRequest) returns (stream SubscribeLogsResponse) {}
+  rpc SubscribeRunner(stream SubscribeRunnerRequest) returns (stream SubscribeRunnerResponse) {}
+  rpc GetSnapshotInfo(GetSnapshotInfoRequest) returns (GetSnapshotInfoResponse) {}
+  rpc GetBauplanInfo(GetBauplanInfoRequest) returns (GetBauplanInfoResponse) {}
+}

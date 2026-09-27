@@ -1,0 +1,42 @@
+generated: '2026-09-27'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://bauplanlabs.com/pricing
+sources:
+- https://bauplanlabs.com/pricing
+name: Bauplan pricing
+audience: developer-api
+pricing_basis: free
+plans:
+- name: Sandbox
+  price_text: Free
+  description: Try for free (No credit card, no time limit)
+  features:
+  - Shared bauplan environment, ready in seconds
+  - Public datasets included, or upload your own
+  - Full CLI, SDK and API, same as paid plans
+  - Community support on Slack
+- name: Dedicated
+  price_text: $700/month (First 14 days free)
+  price: 700
+  description: Your own dedicated instance, private to your team
+  features:
+  - 10GB memory
+  - Unlimited queries, users and agents
+  - Private Slack support
+  - SOC2 Type II, GDPR compliance
+  limits:
+  - name: memory
+    limit_text: 10GB
+- name: Enterprise Custom
+  price_text: Custom (Custom pricing)
+  description: Custom plan for 50GB+ memory, BYOC, dedicated support, etc.
+  features:
+  - Unlimited queries & users
+  - Dedicated customer support and a forward deployed engineer (FDE)
+  - SOC2 Type II, GDPR compliance
+  - PrivateLink or Bring Your Own Cloud (BYOC)
+  limits:
+  - name: memory
+    limit_text: 50GB+
+docs: https://bauplanlabs.com/pricing

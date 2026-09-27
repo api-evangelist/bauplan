@@ -1,0 +1,20 @@
+generated: '2026-09-27'
+method: searched
+source: https://security.bauplanlabs.com/
+signals:
+  data_retention:
+    evidence:
+      - source: https://security.bauplanlabs.com/data-retention-and-disposal-policy?format=html
+        http_status: 200
+        fetched: "true"
+        quote: "A Data Retention and Disposal Policy specifies how customer data is to be retained and disposed of based on compliance requirements and contractual obligations."
+        section: Data Retention and Disposal Policy
+        note: Describes retention period and disposal practices for customer data.
+  incident_notification:
+    evidence:
+      - source: https://security.bauplanlabs.com/incident-response-plan?format=html
+        http_status: 200
+        fetched: "true"
+        quote: "The Incident Response Plan includes tracking a security incident, providing a structured process for detection, analysis, containment, eradication, and recovery."
+        section: Incident Response Plan
+        note: Indicates they have a process to track and respond to security incidents.

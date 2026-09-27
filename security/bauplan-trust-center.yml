@@ -1,0 +1,12 @@
+generated: '2026-09-27'
+method: searched
+probe: true
+source: https://security.bauplanlabs.com/
+url: https://security.bauplanlabs.com/
+certifications:
+- SOC 2
+evidence:
+- source: https://security.bauplanlabs.com/
+  keywords:
+  - soc 2
+  - trust center

@@ -1,23 +1,156 @@
 aid: bauplan
+
 name: Bauplan
-description: 'Bauplan is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/6815c48ebd95a588d14e383b/68c42ab94ffd08a4445ca1ea_open%20graph.jpg
+
+description: Bauplan provides a serverless data platform enabling AI agents to safely build, version, and deploy data pipelines directly on S3
+  using Python. It offers isolated execution, transactional guarantees, and atomic publishing, allowing developers to run AI‑generated code on
+  production data without risk. The platform integrates with major warehouses and orchestration tools, delivering a versioned lakehouse experience
+  for fast, reliable data engineering.
+
 url: https://raw.githubusercontent.com/api-evangelist/bauplan/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Data Engineering
+- AI Agents
+- Serverless Platform
+- Data Pipelines
+- Data Integration
+- Isolation and Rollback
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/bauplan-plans-pricing.yml
+- type: Spectral
+  url: rules/bauplan-rules.yml
+- type: Compliance
+  url: https://security.bauplanlabs.com/
+- type: Authentication
+  url: authentication/bauplan-authentication.yml
+- type: Conformance
+  url: conformance/bauplan-conformance.yml
+- type: Protobuf
+  url: grpc/table_data_import.proto
+- type: Protobuf
+  url: grpc/table_create_plan.proto
+- type: Protobuf
+  url: grpc/subscribe_logs.proto
+- type: Protobuf
+  url: grpc/service.proto
+- type: Protobuf
+  url: grpc/runner_events.proto
+- type: Protobuf
+  url: grpc/runner_comm.proto
+- type: Protobuf
+  url: grpc/query_run.proto
+- type: Protobuf
+  url: grpc/push_runner_status.proto
+- type: Protobuf
+  url: grpc/job_context.proto
+- type: Protobuf
+  url: grpc/get_jobs.proto
+- type: Protobuf
+  url: grpc/external_table_create.proto
+- type: Protobuf
+  url: grpc/common.proto
+- type: Protobuf
+  url: grpc/code_snapshot_run.proto
+- type: Protobuf
+  url: grpc/code_snapshot_re_run.proto
+- type: Protobuf
+  url: grpc/bauplan_info.proto
+- type: LLMsTxt
+  url: llms/bauplan-llms.txt
+- type: Hosts
+  url: hosts/bauplan-hosts.yml
+- type: Vendors
+  url: vendors/bauplan-vendors.yml
+- type: SDKs
+  url: packages/bauplan-packages.yml
+- type: Packages
+  url: packages/bauplan-packages.yml
+- type: TermsOfService
+  url: https://bauplanlabs.com/terms-and-conditions-sandbox
+- type: Pricing
+  url: https://bauplanlabs.com/pricing
+- type: Login
+  url: https://accounts.bauplanlabs.com/sign-in
+- type: GitHubOrganization
+  url: https://github.com/BauplanLabs
+- type: ChangeLog
+  url: https://bauplanlabs.com/releases
+- type: Blog
+  url: https://bauplanlabs.com/blog
+- type: GettingStarted
+  url: https://docs.bauplanlabs.com/tutorial/quick-start
+- type: Documentation
+  url: https://docs.bauplanlabs.com/
+- type: TrustCenter
+  url: security/bauplan-trust-center.yml
+- type: DomainSecurity
+  url: security/bauplan-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://bauplanlabs.com
+
+apis:
+- name: Bauplan API
+  description: Bauplan provides a serverless data platform with a developer API documented at the reference site.
+  humanURL: https://docs.bauplanlabs.com/
+  baseURL: null
+  x-coverage:
+    state: unreadable
+    reason: no-machine-readable-spec
+    detail: Documentation site provides HTML only, no OpenAPI or other machine‑readable contract was found.
+    evidence:
+    - url: https://docs.bauplanlabs.com/
+      status: 200
+    checked: '2026-09-27'
+  aid: bauplan:bauplan-api-2
+- aid: bauplan:bauplan-api
+  name: Bauplan API
+  description: 'Bauplan API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-09-27); not
+
+    the provider''s own document.'
+  humanURL: https://docs.bauplanlabs.com/tutorial/connect-your-agent
+  baseURL: https://raw.githubusercontent.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bauplan-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 30
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

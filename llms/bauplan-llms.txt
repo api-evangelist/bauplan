@@ -1,0 +1,17 @@
+# Bauplan
+
+> Bauplan is a serverless data execution platform for reproducible, versioned Python pipelines. Built for data engineers and AI agents running production workloads on Apache Iceberg.
+
+## Key pages
+- [Homepage](https://www.bauplanlabs.com): Value proposition, use cases, and FAQ.
+- [Platform](https://www.bauplanlabs.com/platform): Platform capabilities — serverless compute, open lakehouse foundation, and interoperability.
+- [Agentic data](https://www.bauplanlabs.com/agentic-data): Data infrastructure for AI agents — the Write-Audit-Publish pattern and safe agent access to production data.
+- [Customers](https://www.bauplanlabs.com/customers): Customer case studies.
+- [Documentation](https://docs.bauplanlabs.com): Full technical documentation.
+
+## Blog (selected high-value posts)
+- [Data engineer agents](https://www.bauplanlabs.com/post/data-engineer-agents): Building a cloud-native ETL agent that writes and runs its own Python to load S3 files into Iceberg tables, using Bauplan branches and a Write-Audit-Publish loop for safety. Part 1 of a two-part series, with a runnable repo.
+- [Write-Audit-Publish: ship data safely, move faster](https://www.bauplanlabs.com/post/write-audit-publish-ship-data-safely-move-faster): The Write-Audit-Publish pattern — write changes in isolation, audit them against quality rules, publish only what passes — and how Bauplan's zero-copy branches, runtime expectations, and atomic merges make it the default workflow.
+- [Git-for-data formal semantics, part 2: branching, merging, and rollbacks](https://www.bauplanlabs.com/post/git-for-data-formal-semantics-part-2-branching-merging-and-rollbacks): Uses Alloy formal modeling to test whether zero-copy branches can give multi-table pipelines true database-style transactional guarantees, why per-table atomicity is not enough, and where the branch-as-transaction analogy breaks.
+- [Safe, untrusted agents for big-data infrastructures](https://www.bauplanlabs.com/post/safe-untrusted-agents-for-big-data-infrastructures): A research paper (S2AI@BigData 2025) and open-source prototype showing how runtime isolation and transactional runs let untrusted AI agents diagnose, fix, and publish pipeline changes on production data without risk.
+- [Bauplan: a year in review](https://www.bauplanlabs.com/post/bauplan-a-year-in-review): 2025 recap — reaching 200,000+ jobs per week, the bet on Python and Apache Iceberg, the move from a DuckDB fork to Apache DataFusion, and the push toward safe AI-agent automation on the data write path.

@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: Bauplan API
+  version: '2026-09-27'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-27: 1 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Bauplan has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 0
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-27'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.bauplanlabs.com/tutorial/connect-your-agent
+servers:
+- url: https://raw.githubusercontent.com
+paths:
+  /BauplanLabs/bauplan-skills/main/CLAUDE.md:
+    get:
+      operationId: get_BauplanLabs_bauplan_skills_main_CLAUDE_md
+      tags:
+      - Bauplanlabs
+      summary: GET /BauplanLabs/bauplan-skills/main/CLAUDE.md
+      x-source: https://docs.bauplanlabs.com/tutorial/connect-your-agent
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o AGENTS.md https://raw.githubusercontent.com/BauplanLabs/bauplan-skills/main/CLAUDE.md \n note Depending on the AI coding\
+          \ tool of your choice, this file might follow a\ndifferent naming convention. For instance, Codex, Cursor, and many other\nassistants\
+          \ read AGENTS.md . Claude Code reads CLAUDE.md by default but uses\n AGENTS.md as a fallback. \n Next steps \n Your agent is connected.\
+          \ Try asking "
+tags:
+- name: Bauplanlabs
+components:
+  securitySchemes:
+    API_Key:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-source: https://docs.bauplanlabs.com/tutorial/installation
+security:
+- API_Key: []
