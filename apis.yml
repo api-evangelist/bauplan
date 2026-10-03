@@ -114,30 +114,30 @@ common:
 
 apis:
 - name: Bauplan API
-  description: Bauplan provides a serverless data platform with a developer API documented at the reference site.
+  description: >-
+    Bauplan provides a serverless data platform with a developer API documented at the reference site.
   humanURL: https://docs.bauplanlabs.com/
   baseURL: null
   x-coverage:
     state: unreadable
     reason: no-machine-readable-spec
-    detail: Documentation site provides HTML only, no OpenAPI or other machine‑readable contract was found.
+    detail: >-
+      Documentation site provides HTML only, no OpenAPI or other machine‑readable contract was found.
     evidence:
     - url: https://docs.bauplanlabs.com/
       status: 200
     checked: '2026-09-27'
   aid: bauplan:bauplan-api-2
-- aid: bauplan:bauplan-api
-  name: Bauplan API
-  description: 'Bauplan API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-09-27); not
-
-    the provider''s own document.'
-  humanURL: https://docs.bauplanlabs.com/tutorial/connect-your-agent
+- aid: bauplan:bauplan-bauplanlabs-api
+  name: Bauplan Bauplanlabs API
+  description: The Bauplanlabs API from Bauplan — 1 operation(s) for bauplanlabs.
+  humanURL: https://docs.bauplanlabs.com/
   baseURL: https://raw.githubusercontent.com
+  tags:
+  - Bauplanlabs
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bauplan-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/bauplan-bauplanlabs-api-openapi.yml
 x-coverage:
   state: none
   reason: no-developer-program
